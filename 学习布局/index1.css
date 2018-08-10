@@ -1,0 +1,28 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.wrap1 {
+  overflow: hidden;
+}
+.wrap1 .item1 {
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+.wrap1 .item1 .son {
+  margin-right: 200px;
+  background-color: red;
+  height: 100px;
+}
+.wrap1 .item2 {
+  width: 190px;
+  float: left;
+  height: 100px;
+  background-color: blue;
+  margin-left: -190px;
+  position: relative;
+}
+/*# sourceMappingURL=index1.css.map */

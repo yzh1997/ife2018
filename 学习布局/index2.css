@@ -1,0 +1,19 @@
+.wrap .item1,
+.wrap .item2 {
+  float: left;
+  width: 200px;
+  height: 100px;
+  position: relative;
+}
+.wrap .item1 {
+  background-color: red;
+}
+.wrap .item2 {
+  background-color: pink;
+}
+.wrap .item3 {
+  height: 100px;
+  margin-left: 410px;
+  background-color: green;
+}
+/*# sourceMappingURL=index2.css.map */

@@ -1,0 +1,123 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.g-hd {
+  background-color: #333;
+  color: #fff;
+}
+.w-hd {
+  overflow: hidden;
+}
+.g-hd .logo {
+  float: left;
+  line-height: 50px;
+}
+.g-hd .links {
+  float: right;
+}
+.g-hd .links li {
+  float: left;
+  margin-right: 10px;
+}
+.g-banner {
+  background-color: forestgreen;
+}
+.w-banner {
+  height: 300px;
+  position: relative;
+}
+.w-banner .tab {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.w-banner .tab li {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.w-banner .tab li a {
+  display: block;
+  width: 30px;
+  height: 28px;
+  text-align: center;
+  vertical-align: bottom;
+  border: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+.w-banner .tab li a:hover {
+  padding-top: 10px;
+  background-color: #fff;
+  color: #333;
+}
+.g-bd .nav {
+  border-bottom: 1px solid #aaa;
+}
+.g-bd .nav .wrap {
+  height: 100px;
+  position: relative;
+}
+.g-bd .nav .wrap .list {
+  position: absolute;
+  bottom: 0;
+}
+.g-bd .nav .wrap .list li {
+  float: left;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+.g-bd .nav .wrap .list li.active a {
+  background-color: #fff;
+}
+.g-bd .nav .wrap .list li a {
+  display: block;
+  padding: 0 10px;
+  line-height: 34px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 11px;
+  text-decoration: none;
+}
+.g-bd .ct {
+  padding-bottom: 20px;
+}
+.g-bd .ct .col-wrap {
+  margin-top: 10px;
+  display: flex;
+}
+.g-bd .ct .col-wrap .cols {
+  flex: 1;
+  text-align: center;
+  padding: 80px;
+  flex-shrink: 0;
+  border: 1px solid #aaa;
+  margin-right: 10px;
+}
+.g-ft {
+  background-color: #666;
+  text-align: center;
+  line-height: 34px;
+  color: #fff;
+}
+.g-ft p {
+  margin: 0;
+}
+/*# sourceMappingURL=sjg.css.map */
