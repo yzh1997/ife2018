@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="name" type="text">
+<button id="submit-btn">Submit</button>
+<script>
+    var ipt = document.getElementById('name');
+    var btn = document.getElementById('submit-btn');
+
+    btn.onclick = function () {
+      console.log(ipt.value)
+    };
+    ipt.onfocus = function () {
+      document.onkeydown = function (e) {
+        if (e.keyCode === 13) {
+          console.log(ipt.value)
+        }
+        if (e.keyCode === 27) {
+          ipt.value = '';
+        }
+      }
+    };
+    ipt.onblur = function () {
+      document.onkeydown = null;
+    }
+</script>
+</body>
+</html>

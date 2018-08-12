@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IFE ECMAScript</title>
+</head>
+<body>
+<div id="wrapper">
+  <div id="news-top" class="section">
+    <h3>Some title</h3>
+    <div class="content">
+      <ul>
+        <li><span>HTML</span><a href="">Some Link1</a></li>
+        <li><span>JS</span><a class="active" href="">Some Link2</a></li>
+        <li><span>CSS</span><a href="">Some Link3</a></li>
+        <li><span>JS</span><a href="">Some Link4</a></li>
+      </ul>
+    </div>
+    <img src="">
+    <p class="">Some Text</p>
+  </div>
+  <div id="news-normal" class="section">
+    <h3>Some title</h3>
+    <div class="content">
+      <ul>
+        <li><span>HTML</span><a href="">Some Link1</a></li>
+        <li><span>HTML</span><a href="">Some Link2</a></li>
+        <li><span>JS</span><a class="active" href="#">Some Link3</a></li>
+        <li><span>CSS</span><a href="">Some Link4</a></li>
+      </ul>
+    </div>
+    <img src="">
+    <p class="">Some Text</p>
+  </div>
+</div>
+<script>
+
+  function getAllListItem() {
+    // 返回页面中所有li标签
+    console.log(document.getElementsByTagName('li'));
+  }
+
+  getAllListItem()
+  function findAllHtmlSpanInOneSection(sectionId) {
+    var section = document.getElementById('news-normal');
+    var as = section.getElementsByTagName('a');
+    spans = Array.prototype.slice.call(spans, 0)
+    spans = spans.filter(function (v) {
+      return v.innerHTML.indexOf('HTML') !== -1
+        })
+    console.log(spans)
+  }
+
+  findAllHtmlSpanInOneSection()
+
+  function findListItem(sectionId, spanCont) {
+    // 返回某个section下，所有所包含span内容为spanCont的LI标签
+    var section = document.getElementById('news-normal');
+    var lis = section.getElementsByTagName('li');
+    lis = Array.prototype.slice.call(lis,0);
+    lis = lis.filter(function (v) {
+      return v.children[0].innerHTML.indexOf('spanCont') !== -1
+    });
+    console.log(lis)
+  }
+  findListItem()
+
+  function getActiveLinkContent(sectionId) {
+    // 返回某个section下，class为active的链接中包含的文字内容
+    var section = document.getElementById('news-normal');
+    var as = section.getElementsByTagName('a');
+    as = Array.prototype.slice.call(as,0);
+    as = as.filter(function (v) {
+      return v.className.indexOf('active') !== -1
+    });
+    console.log(as)
+  }
+  getActiveLinkContent()
+
+</script>
+</body>
+</html>

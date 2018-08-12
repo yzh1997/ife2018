@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="wrap"></div>
+</body>
+<script>
+  let wrap = document.querySelector('#wrap');
+  let str = '<table border="1" style="border-collapse:collapse" >';
+  for (let i = 1; i <= 9; i++) {
+    str += '<tr>'
+    for (let j = 1; j <= i; j++) {
+      str = str + '<td>' + j + '*' + i + '=' + (i*j) + '</td>'
+    }
+    str += '</tr>'
+  }
+  str += '</table>'
+  wrap.innerHTML = str
+</script>
+</html>

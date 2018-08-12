@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+ <p id="show"></p>
+</body>
+
+<script>
+  var show = document.getElementById('show');
+
+  function showTime() {
+    var dt = new Date();
+    var year = dt.getFullYear();
+    var month = format(dt.getMonth()+1) ;
+    var date =  format(dt.getDate());
+    var hour =  format(dt.getHours());
+    var day = daySwitch(dt.getDay());
+    var minute =  format(dt.getMinutes());
+    var second =  format(dt.getSeconds());
+    var str = year + '年' + month + '月' + date + '日'+day +' '+ + hour + ':' + minute + ':' +second;
+    show.innerText = str
+    setTimeout(showTime,500)
+  }
+  function daySwitch(day) {
+    switch (day) {
+      case 0:
+        return '星期日';
+      case 1 :
+        return '星期一';
+      case 2 :
+        return '星期二';
+      case 3 :
+        return '星期三';
+      case 4 :
+        return '星期四';
+      case 5 :
+        return '星期五';
+      case 6 :
+        return '星期六';
+    }
+  }
+  function format(value) {
+    if (value < 10) {
+      return '0'+value
+    }
+    return value
+  }
+
+  showTime();
+</script>
+</html>

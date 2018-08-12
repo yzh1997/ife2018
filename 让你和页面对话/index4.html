@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+<button id="fade-btn">淡出</button>
+<script>
+  window.onload = function () {
+    var div = document.getElementById('fade-obj');
+    var btn = document.getElementById('fade-btn');
+    var opacity = 100;
+    var timer = null;
+    var speed = 0;
+    function changeOpacity(speed) {
+      return function () {
+        opacity += speed;
+        if (opacity < 0 || opacity > 100) { //此处不能<=0或者>=100，因为要考虑初始情况
+          clearInterval(timer);
+          btn.disabled = false;
+          btn.innerHTML = btn.innerHTML === '淡入' ? '淡出' : '淡入';
+          opacity = opacity < 0? 0 : 100;
+        }
+          div.style.opacity = opacity /100;
+          console.log(opacity)
+          }
+    }
+
+    btn.addEventListener('click', function () {
+      speed = this.innerHTML === '淡出' ? -1 : 1;
+      this.disabled = true;
+      timer = setInterval(changeOpacity(speed), 30);
+    }, false)
+  }
+</script>
+</body>
+</html>

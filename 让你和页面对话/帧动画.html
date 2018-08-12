@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .box {
+      width: 480px;
+      height: 480px;
+      margin: 0 auto;
+      background-image: url("face.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+    }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+  window.onload = function () {
+    var box = document.querySelector('.box');
+    var num = 16;
+    var frame = 0;
+    var height = 480;
+    var order = true;
+    var timer = null;
+    function changeFace() {
+      frame += order?1:-1;
+      if (frame > num) {
+        frame = num;
+        order = !order
+      }
+      else if (frame < 0) {
+        frame = 0;
+        order = !order
+      }
+      box.style.backgroundPositionY = -frame * height +'px'
+    }
+    setInterval(changeFace,80)
+  }
+</script>
+</body>
+</html>

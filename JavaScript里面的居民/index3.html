@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  var menuArr = [
+    [1, "Area1", -1],
+    [2, "Area2", -1],
+    [3, "Area1-1", 1],
+    [4, "Area1-2", 1],
+    [5, "Area2-1", 2],
+    [6, "Area2-2", 2],
+    [7, "Area1-2-3", 4],
+    [8, "Area2-2-1", 6],
+  ];
+  var menuObject = {};//用来存放将数组所有元素转换成的对象
+  var menuSubArr = [];//用来存放第一层对象的key值
+  var menuMainObject = {};//最后的结果结果
+  for (let i = 0; i < menuArr.length; i++) {
+    if(menuArr[i][2] === -1) {
+      menuSubArr.push(menuArr[i][0]);
+    }
+    menuObject[menuArr[i][0]] = {
+      name: menuArr[i][1],
+      subMenu:{}
+    };
+  }
+  for (let i =0 ; i< menuArr.length; i++) {
+    if (menuArr[i][2] !== -1) {
+        menuObject[menuArr[i][2]].subMenu[menuArr[i][0]] = menuObject[menuArr[i][0]] //不是第一层的，全部挂载到各自父元素上
+    }
+  }
+  for (var i in menuObject) {
+    if (JSON.stringify(menuObject[i].subMenu) === "{}") {
+      delete  menuObject[i].subMenu
+    }
+  }//删除没有子元素的对象的submenu属性
+  for (let i = 0; i < menuSubArr.length; i++) {
+    menuMainObject[menuSubArr[i]] = menuObject[menuSubArr[i]]
+  }
+    // menuMainObject = JSON.parse(JSON.stringify(menuMainObject)) ;
+  console.log(menuMainObject)
+</script>
+</body>
+</html>
