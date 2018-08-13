@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    td,th {
+      padding: 0 10px;
+      text-align: left;
+    }
+
+  </style>
+</head>
+<body>
+<select id="region-select">
+  <option value="华东">华东</option>
+  <option value="华北">华北</option>
+  <option value="华南">华南</option>
+</select>
+<select id="product-select">
+  <option value="手机">手机</option>
+  <option value="笔记本">笔记本</option>
+  <option value="智能音箱">智能音箱</option>
+</select>
+<div id="table-wrapper">
+</div>
+</body>
+<script src="./data.js"></script>
+<script>
+  var region_select = document.getElementById('region-select');
+  var product_select = document.getElementById('product-select');
+  var table_wrapper = document.getElementById('table-wrapper');
+  renderTable();//初始化
+
+  region_select.onchange = product_select.onchange = function () {
+    renderTable();
+  };
+
+  function renderTable() {
+    var data = getData();
+    var str = '<table border="1" style="border-collapse: collapse"><tr><th>商品<th>地区';
+    for (let i = 1; i <= 12; i++) {
+      str += '<th>' + i + '月'
+    }
+
+   for (let i = 0; i < data.length; i++) {
+     str += '<tr><td>'+data[i].product+'<td>'+ data[i].region
+     for (let j = 0; j < data[i].sale.length; j++) {
+       str += '<td>'+data[i].sale[j]
+     }
+   }
+
+    table_wrapper.innerHTML = str;
+  }
+
+  function getData() {
+    return sourceData.filter(function (item) {
+      return item.region === region_select.value && item.product === product_select.value ;
+    });
+  }
+</script>
+</html>

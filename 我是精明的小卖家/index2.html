@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    td, th {
+      padding: 0 10px;
+      text-align: left;
+    }
+
+    input {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<div id="region-box">
+  <label>华南 <input type="checkbox" value="华南" checked></label>
+  <label>华东 <input type="checkbox" value="华东" checked></label>
+  <label>华北 <input type="checkbox" value="华北" checked></label>
+  <label>全选 <input type="checkbox" value="全选" checked></label>
+</div>
+<div id="product-box">
+  <label>手机 <input type="checkbox" value="手机" checked></label>
+  <label>笔记本 <input type="checkbox" value="笔记本" checked></label>
+  <label>智能音箱 <input type="checkbox" value="智能音箱" checked></label>
+  <label>全选 <input type="checkbox" value="全选" checked></label>
+</div>
+<div id="table-wrapper">
+</div>
+</body>
+<script src="./data.js"></script>
+<script>
+  var region_box = document.getElementById('region-box');
+  var product_box = document.getElementById('product-box');
+  var table_wrapper = document.getElementById('table-wrapper');
+  var region_arr = ["华南", "华东", "华北"];
+  var product_arr = ["手机", "笔记本", "智能音箱"];
+
+  region_box.onclick = product_box.onclick = check;
+  renderTable();
+
+  function check(e) {
+    var t = e.target;
+    var checked_all = true;
+    var checked_num = 0;
+    var agent = e.currentTarget;
+    var id = agent.id;
+    var checkboxes = Array.prototype.slice.call(agent.getElementsByTagName('input'), 0);
+
+    if (t.nodeName.toLowerCase() === 'input') {
+      if (t.value === '全选') {
+        checkboxes.forEach(function (value) {
+          value.checked = true;
+        })
+      }
+      else {
+        for (let i = 0; i < checkboxes.length - 1; i++) {
+          if (!checkboxes[i].checked) {
+            checked_all = false;
+          }
+          else {
+            checked_num++
+          }
+        }
+        if (!checked_num) {
+          t.checked = true;
+        }
+        checkboxes[checkboxes.length - 1].checked = checked_all;
+      }
+    }
+    if (id === 'region-box') {
+      region_arr = [];
+      for (let i = 0; i < checkboxes.length -1; i++) {
+        if (checkboxes[i].checked) {
+          region_arr.push(checkboxes[i].value)
+        }
+      }
+    }
+    else {
+      product_arr = [];
+      for (let i = 0; i < checkboxes.length -1; i++) {
+        if (checkboxes[i].checked) {
+          product_arr.push(checkboxes[i].value)
+        }
+      }
+    }
+    renderTable()
+  }
+
+  function getData() {
+    return sourceData.filter(function (v) {
+      return region_arr.indexOf(v.region) !== -1 && product_arr.indexOf(v.product) !== -1
+    })
+  }
+
+  function renderTable() {
+    var first = '';//第一个显示的th
+    var first_attr = '';//第一个显示属性
+    var second = '';//第二个显示的th
+    var second_attr = '';//第二个显示的属性
+    var span_num = 1; //默认占一格
+    var span_str = '';
+    if(region_arr.length !== 1 || product_arr.length !== 1) {
+      span_num = Math.max(region_arr.length,product_arr.length); //第一项需要跳跃的次数
+      console.log(region_arr.length,product_arr.length)
+    }
+    if (region_arr.length === 1 && region_arr.length < product_arr.length) {
+      first = '地区';
+      second = '商品';
+      first_attr = 'region';
+      second_attr = 'product'
+    }
+    else {
+      first = '商品';
+      second = '地区';
+      first_attr = 'product';
+      second_attr = 'region'
+    }
+    var data = getData();
+    var str = '<table border="1" style="border-collapse: collapse"><tr><th>'+first+'<th>'+second;
+    for (let i = 1; i <= 12; i++) {
+      str += '<th>' + i + '月'
+    }
+
+    for (let i = 0; i < data.length; i++) {
+      str += '<tr>';
+      if(i % span_num === 0 ) { //这里是核心
+        str += '<td rowspan="'+span_num+'">' + data[i][first_attr] ;
+      }
+      str +=  '<td>' + data[i][second_attr]
+      for (let j = 0; j < data[i].sale.length; j++) {
+        str += '<td>' + data[i].sale[j]
+      }
+    }
+    console.log(data);
+    table_wrapper.innerHTML = str;
+  }
+</script>
+</html>

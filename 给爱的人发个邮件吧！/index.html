@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    input {
+      width: 200px;
+    }
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+      border: 1px solid #aaa;
+      min-width: 202px;
+      display: none;
+      width: 202px;
+      font-size: 12px;
+      overflow: hidden;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: dodgerblue;
+      color: #fff;
+    }
+    .checked {
+      background-color: pink;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <input id="email-input" type="text">
+  <ul id="email-sug-wrapper" class="email-sug"></ul>
+</div>
+<script>
+  var email_input = document.getElementById('email-input');
+  var email_list = document.getElementById('email-sug-wrapper');
+  var items = email_list.children ;
+  var items_arr = [];
+  var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+  email_input.focus()
+  email_list.addEventListener('click',function (e) {
+    var t = e.target;
+    if(t.nodeName.toLocaleLowerCase() === 'li') {
+      email_input.value = strDecode(t.innerHTML) ;
+      this.style.display = 'none'
+      email_input.focus()
+    }
+  },false);
+  email_input.oninput = function (e) {
+    var str = this.value.replace(/\s+/g,'');
+    str = strEncode(str);
+    switchListShow(str)
+  };
+  email_input.onkeydown = function (e) {
+    switch (e.keyCode) {
+      case 38:
+        setChecked(-1);
+        break;
+      case 40:
+        setChecked(1);
+        break;
+      case 13:
+        submitContent();
+        break;
+      case 27:
+        email_input.select();
+    }
+  }
+  function submitContent() {
+    var checked_content = email_list.querySelector('.checked').innerHTML;
+    email_input.value = strDecode(checked_content) ;
+    email_list.style.display = 'none'
+  }
+  function setChecked(dir) {
+    var checked_li =  email_list.querySelector('.checked');
+    items_arr = Array.prototype.slice.call(items, 0);
+    var checked_index = items_arr.indexOf(checked_li);
+    checked_li.className = '';
+
+    if (items[0] === checked_li && dir === -1) {
+      items[items.length -1].className = 'checked';
+    }
+    else if (items[items.length -1] === checked_li && dir === 1) {
+      items[0].className = 'checked';
+    }
+    else {
+      items[checked_index + dir].className = 'checked';
+    }
+  }
+
+
+  function createEmail(str) {
+    var create_str = '';
+    var pattern = ''
+    if(str.indexOf('@') !== -1) {
+      pattern = str.slice(str.indexOf('@')+1);
+      str = str.slice(0,str.indexOf('@'));
+
+    }
+    for (let i = 0; i < postfixList.length; i++) {
+      if (postfixList[i].indexOf(pattern) !== -1) {
+        create_str += `<li>${str}@${postfixList[i]}</li>`
+      }
+    }
+    if(!create_str.length) {
+      for (let i = 0; i < postfixList.length; i++) {
+        create_str += `<li>${str}@${postfixList[i]}</li>`
+      }
+    }
+    create_str= create_str.replace(/<li>/,'<li class="checked">')
+    email_list.innerHTML = create_str;
+  }
+  function switchListShow(str) {
+    if (str === '') {
+      email_list.style.display = 'none';
+    }
+    else {
+      email_list.style.display = 'block';
+      createEmail(str)
+    }
+  }
+  function strEncode(str) {
+    var s = "";
+    s = str.replace(/&/g,"&amp;");
+    s = s.replace(/</g,"&lt;");
+    s = s.replace(/>/g,"&gt;");
+    return s
+  }
+  function strDecode(str) {
+    var s = "";
+    s = str.replace(/&amp;/g,"&");
+    s = s.replace(/&lt;/g,"<");
+    s = s.replace(/&gt;/g,">");
+    return s
+  }
+
+
+</script>
+</body>
+</html>
