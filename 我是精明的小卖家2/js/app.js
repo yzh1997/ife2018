@@ -9,7 +9,7 @@ for (let i = 0; i < sourceData.length; i++) {
   data2.push(sourceData[i].sale);
 }
 region_box.onclick = product_box.onclick = check;
-drawChart(data.sale);
+drawChart(data2);
 drawLine(data2);
 renderTable();
 tableHover();

@@ -8,7 +8,6 @@ function check(e) {
   var id = agent.id;
   var checkboxes = Array.prototype.slice.call(agent.getElementsByTagName('input'), 0);
   var line_data = [];
-  var check__data = [];
   if (t.nodeName.toLowerCase() === 'input') {
     if (t.value === '全选') {
       checkboxes.forEach(function (value) {
@@ -46,11 +45,12 @@ function check(e) {
       }
     }
   }
-  check__data = getData();
+  var check__data = getData();
   for (let i = 0; i < check__data.length; i++) {
     line_data.push(check__data[i].sale)
   }
   data2 = line_data;
   renderTable();
   drawLine(data2);
+  drawChart(data2)
 }

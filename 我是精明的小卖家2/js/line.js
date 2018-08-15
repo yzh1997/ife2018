@@ -5,7 +5,7 @@
     const distance = (xLen - 100) / 12;
     const axisColor = "black";
     const lineColor = "blue";
-    const colors = ["red", "green", "blue", "black", "yellow", "orange", "purple", "aqua", "brown"];
+    const colors = ["#27a1ea", "#9cdc82", "#ff9f69", "#d660a8", "#6370de", "#32d3eb", "#d4ec59", "#feb64d", "#b55cbd"];
     var canvas = document.getElementById('canvas');
     var maxArr = [];
     var maxNum = 0;
@@ -44,7 +44,6 @@
         context.fill();
       }
     }
-
 
 
   }
