@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0}
+        body{background: #f5f5f5}
+        ul{list-style: none;}
+        select{padding:3px 5px;font-size: 14px;}
+        .filter{
+            width:650px;
+            padding-top:40px;
+            margin:0 auto;
+        }
+        .filter>*{display:inline-block;margin:10px}
+        .wrapper{
+            color:#333;
+            background:black;
+            height:150px;
+        }
+        #region-radio-wrapper,#product-radio-wrapper{
+            color:#eee;
+        }
+        .item input{margin:5px}
+        /*表格部分*/
+        .layer{
+            width:80%;
+            margin:0 auto;
+            border:1px solid #a9a9a9;
+            border-radius: 5px;
+            margin-top: -50px;
+            text-align: left;
+            background: white;
+            padding:30px 0;
+        }
+        .show{margin:0 auto;}
+        .show th,.show td{padding:5px}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+   <div class="filter">
+       <select id="month-select">
+           <option value="1">1月</option>
+           <option value="2">2月</option>
+           <option value="3">3月</option>
+           <option value="4">4月</option>
+           <option value="5">5月</option>
+           <option value="6">6月</option>
+           <option value="7">7月</option>
+           <option value="8">8月</option>
+           <option value="9">9月</option>
+           <option value="10">10月</option>
+           <option value="11">11月</option>
+           <option value="12">12月</option>
+       </select>
+       <div id="region-radio-wrapper">
+           地区：
+           <div class="item"></div>
+       </div>
+       <div id="product-radio-wrapper">
+           产品：
+           <div class="item"></div>
+       </div>
+   </div>
+</div>
+<main>
+    <div class="layer">
+        <table class="show" border="1" cellspacing="0">
+            <thead>
+                <tr>
+                <th>商品</th>
+                <th>地区</th>
+                <th>1月</th>
+                <th>2月</th>
+                <th>3月</th>
+                <th>4月</th>
+                <th>5月</th>
+                <th>6月</th>
+                <th>7月</th>
+                <th>8月</th>
+                <th>9月</th>
+                <th>10月</th>
+                <th>11月</th>
+                <th>12月</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="data.js"></script>
+<script>
+    //路由模块，表单模块，数据处理模块，表格模块，图表模块。
+    let regionData=["全选","华东","华南","华北"],
+            productData=["全选","手机","笔记本","智能音箱"],
+            regionWrapper=document.querySelector('#region-radio-wrapper .item'),
+            productWrapper=document.querySelector('#product-radio-wrapper .item'),
+            regionResult=[],productResult=[];
+    function createCheckBox(wrapper,data){
+        let str='';
+        for (let i in data){
+            str+=`<input type="checkbox" value="${data[i]}">${data[i]}</input>`;
+        }
+        wrapper.innerHTML=str;
+        let check=wrapper.children;
+        check[1].checked=true;
+        wrapper.onclick=function(e){
+            if(e.target&& e.target.type=='checkbox'){
+                //全选&反选;取消全选还要默认选择一个？？
+                if(e.target.value=="全选"){
+                    for(let i=1;i<check.length;i++)check[i].checked= e.target.checked;
+                    if(!e.target.checked)check[1].checked=true;
+                }else{
+                    if(e.target.checked==true&&wrapper.querySelectorAll('input:checked').length==data.length-1){
+                        check[0].checked=true;
+                    }else if(e.target.checked==false){
+                        check[0].checked=false;
+                        wrapper.querySelectorAll('input:checked').length?'':e.target.checked=true;
+                    }
+                }
+                renderForm(processData(sourceData))
+            }
+        }
+    }
+    function processData(d){
+        let data=[];
+        regionResult=regionWrapper.querySelectorAll('input:checked');
+        productResult=productWrapper.querySelectorAll('input:checked');
+        if(regionResult[0].value=="全选"&&productResult[0].value=="全选"){
+            return d;
+        }else {
+            d.map(function(val,idx,arr){
+                for(let i=0;i<productResult.length;i++){
+                    if(val.product==productResult[i].value){
+                        for(let j=0;j<regionResult.length;j++){
+                            if(val.region==regionResult[j].value)data.push(val);
+                        }
+                    }
+                }
+            });
+            return data;
+        }
+    }
+    function renderForm(data){
+        regionResult=regionWrapper.querySelectorAll('input:checked');
+        productResult=productWrapper.querySelectorAll('input:checked');
+        let parent=document.getElementsByTagName('tbody')[0],
+                str='',len=data.length;
+        if(productResult.length==1){
+            //商品一个,多个地区;都是一个[我商品都在0号，地区都在一号]
+            str+=`<tr><td rowspan="${data.length}">${data[0].product}</td>`;
+            data.forEach(function(value,idx,arr){
+                str+=`<td>${value.region}</td>`;
+                str=str+monthData(value.sale)+'</tr>'
+            })
+        }else if(regionResult.length==1){
+            //地区一个商品多个
+            str+=`<tr><td rowspan="${data.length}">${data[0].region}</td>`;
+            data.forEach(function(value,idx,arr){
+                str+=`<td>${value.product}</td>`;
+                str=str+monthData(value.sale)+'</tr>'
+            })
+        }else{
+            //都是多个
+            let i= 0, s, j;
+            if(regionResult[0].value=="全选"){
+                regionResult=Array.prototype.slice.call(regionResult);
+                regionResult.shift();
+            }
+            if(productResult[0].value=="全选"){
+                productResult=Array.prototype.slice.call(productResult)
+                productResult.shift();
+            }
+            for(let k=0;k<productResult.length;k++){
+                s=i;
+
+                while(i<data.length&&productResult[k].value==data[i].product){
+                    console.log(data[i],productResult[k]);
+                    i++;
+                    console.log(i);
+                }
+                str+=`<tr><td rowspan="${i-s}">${data[s].product}</td>`
+                for(j=s;j<i;j++){
+                    if(j==s){
+                        str+=`<td>${data[j].region}</td>`
+                    }else{
+                        str+=`<tr><td>${data[j].region}</td>`
+                    }
+                   str=str+monthData(data[j].sale)+'</tr>';
+                }
+            }
+        }
+
+        parent.innerHTML='';
+        parent.innerHTML=str;
+    }
+    let monthData=function(d){
+        let str='';
+        for(let i=0;i< d.length;i++)str+=`<td>${d[i]}</td>`
+        return str;
+    }
+    createCheckBox(regionWrapper,regionData);
+    createCheckBox(productWrapper,productData);
+    renderForm(processData(sourceData));
+</script>
+</body>
+</html>

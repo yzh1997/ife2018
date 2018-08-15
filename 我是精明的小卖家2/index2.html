@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    td, th {
+      padding: 0 10px;
+      text-align: left;
+    }
+    #table-wrapper {
+
+    }
+    input {
+      vertical-align: middle;
+    }
+    tr:hover {
+      background-color: dodgerblue;
+    }
+    tr:hover td{
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+<div id="region-box">
+  <label>华南 <input type="checkbox" value="华南" checked></label>
+  <label>华东 <input type="checkbox" value="华东" checked></label>
+  <label>华北 <input type="checkbox" value="华北" checked></label>
+  <label>全选 <input type="checkbox" value="全选" checked></label>
+</div>
+<div id="product-box">
+  <label>手机 <input type="checkbox" value="手机" checked></label>
+  <label>笔记本 <input type="checkbox" value="笔记本" checked></label>
+  <label>智能音箱 <input type="checkbox" value="智能音箱" checked></label>
+  <label>全选 <input type="checkbox" value="全选" checked></label>
+</div>
+
+<svg version="1.1" baseProfile="full" width="550" height="450" xmlns="http://www.w3.org/2000/svg" id="svg">
+</svg>
+<canvas id="canvas" width="550" height="450"></canvas>
+<div id="table-wrapper">
+</div>
+</body>
+<script src="./data.js"></script>
+<script src="js/check.js"></script>
+<script src="js/get_data.js"></script>
+<script src="js/render_table.js"></script>
+<script src="js/bar.js"></script>
+<script src="js/line.js"></script>
+<script src="js/table-hover.js"></script>
+<script src="js/get-table-data.js"></script>
+<script src="js/app.js"></script>
+</html>
