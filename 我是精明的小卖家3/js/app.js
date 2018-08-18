@@ -4,7 +4,7 @@ var table_wrapper = document.getElementById('table-wrapper');
 var region_arr = ["华南", "华东", "华北"];
 var product_arr = ["手机", "笔记本", "智能音箱"];
 var data2 = [];
-
+sourceData = JSON.parse(localStorage.sourceData)  || sourceData;
 for (let i = 0; i < sourceData.length; i++) {
   data2.push(sourceData[i].sale);
 }
