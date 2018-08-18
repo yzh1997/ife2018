@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link rel="stylesheet" href="font/iconfont.css">
   <style>
     td, th {
       padding: 0 10px;
@@ -18,23 +19,39 @@
       vertical-align: middle;
     }
     tr:hover {
-      background-color: cornflowerblue;
+      background-color: forestgreen;
     }
     tr:hover td{
       color: #ffffff;
     }
     tr:hover input{
-      background-color: cornflowerblue;
-      color: #fff;
+      background-color: #fff;
     }
     tr td {
       width: 75px;
       cursor: pointer ;
+      position: relative;
+    }
+    .on-view {
+      background:url("edit.png") no-repeat 90% center;
+    }
+    .on-edit {
+      width: 100px;
+    }
+    .iconfont {
+      font-size: 15px;
+    }
+    .icon-yes {
+      background-color: dodgerblue;
+      color: #fff;
+    }
+    .icon-no {
+      background-color: darkred;
+      color: #fff;
     }
     td input {
-      width: 60px;
+      width: 45px;
       border: none;
-      outline: none;
     }
 
   </style>
@@ -58,8 +75,9 @@
 <canvas id="canvas" width="550" height="450"></canvas>
 <div id="table-wrapper">
 </div>
-<button id="save" type="button">保存</button>
 </body>
+<script>
+</script>
 <script src="./data.js"></script>
 <script src="js/check.js"></script>
 <script src="js/get_data.js"></script>

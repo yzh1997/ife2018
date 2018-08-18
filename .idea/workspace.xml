@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d193b624-254f-4bb5-bbcf-efb55ef50103" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/我是精明的小卖家/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/bar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/check.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/check.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/get-table-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/get-table-data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/line.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/line.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js" beforeDir="false" afterPath="$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,20 +27,20 @@
     <session id="2066887195">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="11" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="12" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="babelrc" value="2" />
           <entry key="css" value="3" />
-          <entry key="html" value="25" />
-          <entry key="js" value="30" />
+          <entry key="html" value="29" />
+          <entry key="js" value="43" />
           <entry key="json" value="4" />
           <entry key="less" value="5" />
           <entry key="txt" value="2" />
@@ -46,9 +49,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="25" />
+          <entry key="HTML" value="29" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="43" />
           <entry key="Less" value="5" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="tsconfig" value="1" />
@@ -56,15 +59,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="15081" />
-          <entry key="js" value="2517" />
+          <entry key="html" value="15446" />
+          <entry key="js" value="3999" />
           <entry key="less" value="3199" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="15081" />
-          <entry key="JavaScript" value="2517" />
+          <entry key="HTML" value="15450" />
+          <entry key="JavaScript" value="3995" />
           <entry key="Less" value="3199" />
         </counts>
       </usages-collector>
@@ -73,73 +76,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/index2.html">
+        <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+            <state relative-caret-position="540">
+              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/app.js">
+        <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/js/render_table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/get_data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/check.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/line.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="513">
+              <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/bar.js">
+        <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/js/table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="42" column="69" lean-forward="true" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+            <state relative-caret-position="297">
+              <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!block;n#tableHover#0" />
+                <element signature="e#535#583#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js">
+        <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="393">
+              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/get-table-data.js">
+        <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/data.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="339">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -177,11 +162,14 @@
       <find>product_arr.push</find>
       <find>str</find>
       <find>consol</find>
-      <find>con</find>
-      <find>conso</find>
       <find>data2</find>
       <find>data</find>
       <find>color</find>
+      <find>ctx</find>
+      <find>rect</find>
+      <find>con</find>
+      <find>conso</find>
+      <find>ipt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,15 +200,19 @@
         <option value="$PROJECT_DIR$/给爱的人发个邮件吧！/index.html" />
         <option value="$PROJECT_DIR$/我是精明的小卖家/demo.html" />
         <option value="$PROJECT_DIR$/我是精明的小卖家/index.html" />
-        <option value="$PROJECT_DIR$/我是精明的小卖家/index2.html" />
-        <option value="$PROJECT_DIR$/我是精明的小卖家2/index2.html" />
-        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/app.js" />
         <option value="$PROJECT_DIR$/我是精明的小卖家2/js/check.js" />
         <option value="$PROJECT_DIR$/我是精明的小卖家2/js/line.js" />
-        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/get-table-data.js" />
-        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/app.js" />
-        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家/index2.html" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家2/index2.html" />
         <option value="$PROJECT_DIR$/我是精明的小卖家2/js/bar.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/get-table-data.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家3/js/render_table.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家3/js/app.js" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家3/index2.html" />
+        <option value="$PROJECT_DIR$/我是精明的小卖家3/js/table.js" />
       </list>
     </option>
   </component>
@@ -255,6 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,26 +258,25 @@
             <path>
               <item name="ife2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="ife2018" type="462c0819:PsiDirectoryNode" />
-              <item name="我是精明的小卖家2" type="462c0819:PsiDirectoryNode" />
+              <item name="我是精明的小卖家3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ife2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="ife2018" type="462c0819:PsiDirectoryNode" />
-              <item name="我是精明的小卖家2" type="462c0819:PsiDirectoryNode" />
+              <item name="我是精明的小卖家3" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/迅雷下载/ifeing-master/web/app/Day34_36_smartSeller2" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -329,12 +321,14 @@
       <workItem from="1534212472375" duration="7000" />
       <workItem from="1534306756429" duration="12565000" />
       <workItem from="1534330372153" duration="388000" />
-      <workItem from="1534333944490" duration="6833000" />
+      <workItem from="1534333944490" duration="8091000" />
+      <workItem from="1534385341132" duration="4463000" />
+      <workItem from="1534411338734" duration="4999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102011000" />
+    <option name="totallyTimeSpent" value="112731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -516,76 +510,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/data.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/get_data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/check.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/line.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="108">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="116" column="29" lean-forward="true" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js" />
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/get-table-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="135">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/table-hover.js">
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/get_data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/bar.js">
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="42" column="69" lean-forward="true" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
+        <state relative-caret-position="378">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/check.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/data.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家2/js/render_table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/js/render_table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/我是精明的小卖家3/js/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!block;n#tableHover#0" />
+            <element signature="e#535#583#0" />
+          </folding>
         </state>
       </provider>
     </entry>

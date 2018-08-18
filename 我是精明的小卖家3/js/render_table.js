@@ -33,7 +33,7 @@
       }
       str += '<td>' + data[i][second_attr]
       for (let j = 0; j < data[i].sale.length; j++) {
-        str += `<td index=${j}><input  value="` + data[i].sale[j]+'"/>'
+        str += `<td index=${j}>`+ data[i].sale[j]
       }
     }
     table_wrapper.innerHTML = str;
