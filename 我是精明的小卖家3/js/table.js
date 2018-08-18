@@ -31,11 +31,7 @@ function iptEdit(parent) {
   ipt.focus();
   ipt.select();
 
-  ipt.addEventListener('keyup',function (ev) {
-    if (ev.keyCode === 13) {
-      btn_confirm.click();
-    }
-  },false);
+
   btn_confirm.addEventListener('click',function (ev) {
     var tr_index = parent.parentNode.getAttribute('index'),
         td_index = parent.getAttribute('index');
@@ -45,15 +41,25 @@ function iptEdit(parent) {
     ev.stopPropagation();
     document.removeEventListener('click',documentClickCancel);
     localStorage.sourceData = JSON.stringify(sourceData) ;
-
   },false);
 
   btn_cancel.addEventListener('click',function (ev) {
     document.removeEventListener('click',documentClickCancel);
-    confirmEdit(parent,original_value)
+    confirmEdit(parent,original_value);
     ev.stopPropagation()
   },false);
+
+  ipt.addEventListener('keyup',function (ev) {
+    if (ev.keyCode === 13) {
+      btn_confirm.click();
+    }
+    if (ev.keyCode === 27) {
+      btn_cancel.click();
+    }
+  },false);
+
   document.addEventListener('click',documentClickCancel,false);
+  
   function documentClickCancel(ev) {
     if (!parent.contains(ev.target) && ev.target !== parent) {
       confirmEdit(parent, original_value);
