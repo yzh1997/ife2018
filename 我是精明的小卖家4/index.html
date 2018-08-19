@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div id="wrap">
+  <button id="a">A</button>
+  <button id="b">B</button>
+  <button id="c">C</button>
+  <button id="d">D</button>
+  <button id="e">E</button>
+  <button id="f">F</button>
+</div>
+
+
+<div id="contABC"></div>
+<div id="contDEF"></div>
+</body>
+<script>
+  var btn_wrap = document.getElementById('wrap');
+  var contABC_btnid = ['a', 'b', 'c'];
+  var contDEF_btnid = ['d', 'e', 'f'];
+  btn_wrap.addEventListener('click',function (ev) {
+    var t = ev.target;
+    if (t.nodeName.toLowerCase() === 'button') {
+      if (contABC_btnid.indexOf(t.id) !== -1) {
+        location.hash = 'contABC'+ '&'+t.innerHTML;
+      }
+      else {
+        location.hash = 'contDEF'+ '&'+t.innerHTML;
+      }
+    }
+  },false);
+
+  function decodeHash() {
+    var index = location.hash.indexOf('#');
+    return location.hash.slice(index+1)
+  }
+
+  function renderContent() {
+    var content_arr = [];
+    if (location.hash) {
+      content_arr = location.hash.slice(1).split('&');
+      document.getElementById(content_arr[0]).innerHTML = content_arr[1]
+    }
+
+  }
+
+  window.onhashchange = renderContent;
+  window.onload = renderContent;
+</script>
+</html>

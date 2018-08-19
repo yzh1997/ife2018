@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<div id="region-wrap">
+  <label><input type="checkbox" name="region" value="华东">华东</label>
+  <label><input type="checkbox" name="region" value="华南">华南</label>
+  <label><input type="checkbox" name="region" value="华北">华北</label>
+</div>
+<div id="product-wrap">
+  <label><input type="checkbox" name="product" value="智能音箱">智能音箱</label>
+  <label><input type="checkbox" name="product" value="手机">手机</label>
+  <label><input type="checkbox" name="product" value="笔记本">笔记本</label>
+</div>
+
+<div id="region-cont"></div>
+<div id="product-cont"></div>
+<div id="cont-wrap"></div>
+</body>
+<script>
+  var region_wrap = document.getElementById('region-wrap');
+  var product_wrap = document.getElementById('product-wrap');
+  var ipts = document.querySelectorAll('input');
+  var cont_wrap = document.getElementById('cont-wrap');
+  var region_select_arr = [];
+  var product_select_arr = [];
+  function initCheckBox() {
+    var hash_str = decodeURIComponent(location.hash);
+    var select_arr = [];
+    region_select_arr = hash_str.split('&')[0].slice(1).split('=')[1].split(',');
+    product_select_arr = hash_str.split('&')[1].split('=')[1].split(',');
+    select_arr = region_select_arr.concat(product_select_arr);
+
+    console.log(select_arr);
+    for (let i =0; i < ipts.length; i++) {
+      if (select_arr.indexOf(ipts[i].value) !== -1) {
+        ipts[i].checked = true;
+      }
+    }
+  }
+
+  region_wrap.addEventListener('click',function (ev) {
+    var t = ev.target;
+    if (t.nodeName.toLowerCase() === 'input') {
+      if (t.checked) {
+         if(region_select_arr.indexOf(t.value) === -1) {
+           region_select_arr.push(t.value)
+         }
+      }
+      else {
+        if(region_select_arr.indexOf(t.value) !== -1) {
+          region_select_arr.splice(region_select_arr.indexOf(t.value),1)
+        }
+      }
+      setHash()
+    }
+  });
+  product_wrap.addEventListener('click',function (ev) {
+    var t = ev.target;
+    if (t.nodeName.toLowerCase() === 'input') {
+      if (t.checked) {
+         if(product_select_arr.indexOf(t.value) === -1) {
+           product_select_arr.push(t.value)
+         }
+      }
+      else {
+        if(product_select_arr.indexOf(t.value) !== -1) {
+          product_select_arr.splice(product_select_arr.indexOf(t.value),1)
+        }
+      }
+      setHash()
+    }
+  });
+  function setHash() {
+    var hash_str = 'region=';
+    hash_str += region_select_arr.join(',');
+    hash_str += '&product=' + product_select_arr.join(',');
+    location.hash = hash_str;
+  }
+
+  window.onload = initCheckBox;
+</script>
+</html>
