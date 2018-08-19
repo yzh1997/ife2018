@@ -1,5 +1,4 @@
 ;
-
 function check(e) {
   var t = e.target;
   var checked_all = true;
@@ -54,4 +53,11 @@ function check(e) {
   drawLine(data2);
   drawChart(data2)
 
+}
+
+function setHash() {
+  var hash_str = 'region=';
+  hash_str += region_arr.join(',');
+  hash_str += '&product=' + product_arr.join(',');
+  location.hash = hash_str;
 }

@@ -59,7 +59,7 @@ function iptEdit(parent) {
   },false);
 
   document.addEventListener('click',documentClickCancel,false);
-  
+
   function documentClickCancel(ev) {
     if (!parent.contains(ev.target) && ev.target !== parent) {
       confirmEdit(parent, original_value);
